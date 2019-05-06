@@ -14,6 +14,16 @@ Main function is TODO list controlled by terminal.
 
 ## Function
 
+### Requirements:
+
+- diesel_cli
+
+Before execute function, execute this:
+
+```
+diesel migration run
+```
+
 ### Show todo
 
 ```bash
