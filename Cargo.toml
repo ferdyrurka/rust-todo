@@ -1,0 +1,9 @@
+[package]
+name = "rust-todo-cli"
+version = "0.1.0"
+authors = ["Ferdyrurka <kontakt@lukaszstaniszewski.pl>"]
+edition = "2018"
+
+[dependencies]
+diesel = { version = "1.4.*", features = ["postgres"] }
+dotenv = "0.13.0"
