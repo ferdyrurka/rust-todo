@@ -21,6 +21,8 @@ Main function is TODO list controlled by terminal.
 Before execute function, execute this:
 
 ```
+make start
+
 diesel migration run
 ```
 
