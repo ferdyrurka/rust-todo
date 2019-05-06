@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  database:
+    image: postgres:11.2
+    container_name: 'database-rust-todo'
+    env_file:
+      - .env
+    ports:
+      - '5435:5432'
+    environment:
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_DB=${DB_NAME}
+    volumes:
+      - postgresql:/var/lib/postgresql/data
+
+volumes:
+  postgresql:
+    driver: local
