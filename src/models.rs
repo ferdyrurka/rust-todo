@@ -1,4 +1,4 @@
-use schema::todo;
+use crate::schema::todo;
 
 #[derive(Queryable)]
 pub struct Todo {
