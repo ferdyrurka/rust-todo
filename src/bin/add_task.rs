@@ -36,7 +36,7 @@ fn main() {
         priority: &priority
     };
 
-    if !todo_repository::create_task(&new_todo) {
+    if !todo_repository::create_task(new_todo) {
         println!("Something went wrong");
         return;
     }
