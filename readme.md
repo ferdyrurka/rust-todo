@@ -38,4 +38,8 @@ cargo run --bin show_todo
 cargo run --bin add_task
 ```
 
-### Remove todo
+### Delete todo
+
+```bash
+cargo run --bin delete_task [todo id]
+```
