@@ -16,8 +16,8 @@ fn main() {
 
     if results.len() != 0 {
         for single_todo in results {
-            println!("Task id: {}", single_todo.todo_id);
-            println!("Task: {} priority: {}", single_todo.task, single_todo.priority);
+            println!("================== Task id: {} ==================", single_todo.todo_id);
+            println!("Task: {}Priority: {}", single_todo.task, single_todo.priority);
         }
     } else {
         println!("Don't found TODO. Have a nice day.");
