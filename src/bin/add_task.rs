@@ -15,7 +15,7 @@ fn main() {
 
     println!("Write priority task: ");
     let mut priority_args:String = String::new();
-    stdin.read_line(&mut priority_args).ok().expect("Failed to read task");
+    stdin.read_line(&mut priority_args).ok().expect("Failed to read priority");
 
     let priority:i16;
     match priority_args.trim().parse::<i16>() {
