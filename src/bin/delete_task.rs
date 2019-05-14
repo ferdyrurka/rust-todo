@@ -17,6 +17,7 @@ fn main() {
 
     if !todo_repository::delete_task(task_id) {
         println!("Failed delete todo!");
+        return;
     }
 
     println!("Delete todo successfully!");
