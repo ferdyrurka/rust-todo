@@ -34,4 +34,8 @@ cargo run --bin show_todo
 
 ### Add todo
 
+```bash
+cargo run --bin add_task
+```
+
 ### Remove todo
