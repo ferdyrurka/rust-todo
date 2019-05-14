@@ -11,7 +11,7 @@ fn main() {
     println!("Write your task message: ");
     let mut task_args:String = String::new();
     stdin.read_line(&mut task_args).ok().expect("Failed to read task");
-    let task = htmlescape::encode_attribute(&task_args.to_owned());
+    let task = htmlescape::encode_minimal(&task_args.to_owned());
 
     println!("Write priority task: ");
     let mut priority_args:String = String::new();
@@ -36,5 +36,10 @@ fn main() {
         priority: &priority
     };
 
-    todo_repository::create_task(&new_todo);
+    if !todo_repository::create_task(&new_todo) {
+        println!("Something went wrong");
+        return;
+    }
+
+    println!("Saved successfully");
 }
