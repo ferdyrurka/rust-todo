@@ -1,18 +1,10 @@
 extern crate rust_todo_cli;
 
-use diesel::prelude::*;
-use rust_todo_cli::database;
-use rust_todo_cli::models::Todo;
+use rust_todo_cli::repository::todo_repository;
 
 fn main() {
-    use rust_todo_cli::schema::todo::dsl::*;
-
-    let connection = database::establish_connection();
-    let results = todo.load::<Todo>(&connection)
-        .expect("Error loading todo")
-    ;
-
-    println!("Displaying {} todo", results.len());
+    let results = todo_repository::find_all();
+    println!("Displaying {} todo, max show is 30", results.len());
 
     if results.len() != 0 {
         for single_todo in results {
